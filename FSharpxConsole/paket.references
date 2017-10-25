@@ -1,0 +1,4 @@
+FSharp.Core
+
+group Main
+    FSharpx.Extras
