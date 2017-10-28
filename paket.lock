@@ -14,4 +14,5 @@ NUGET
       FSharpx.Collections
 HTTP
   remote: file://
+    System.Drawing.dll (/usr/lib/mono/4.7-api/System.Drawing.dll)
     System.Windows.Forms.dll (/usr/lib/mono/4.7-api/System.Windows.Forms.dll)

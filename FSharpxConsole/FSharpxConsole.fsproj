@@ -5,12 +5,11 @@
     <TargetFramework>net461</TargetFramework>
     <DebugType>portable</DebugType>
   </PropertyGroup>
-
   <PropertyGroup>
     <IsWindows Condition="'$(OS)' == 'Windows_NT'">true</IsWindows>
     <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
     <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
-  </PropertyGroup>  
+  </PropertyGroup>
   <PropertyGroup Condition="'$(IsWindows)' == 'true'">
     <FscToolPath>C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0</FscToolPath>
     <FscToolExe>fsc.exe</FscToolExe>
@@ -23,8 +22,17 @@
     <FscToolPath>/usr/bin</FscToolPath>
     <FscToolExe>fsharpc</FscToolExe>
   </PropertyGroup>
-
   <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\paket-files\localhost\System.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+      <Paket>True</Paket>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>..\paket-files\localhost\System.Drawing.dll</HintPath>
+      <Private>True</Private>
+      <Paket>True</Paket>
+    </Reference>
     <Compile Include="FSharpxConsole.fs" />
     <None Include="App.config" />
   </ItemGroup>

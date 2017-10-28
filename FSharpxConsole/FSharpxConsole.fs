@@ -86,6 +86,7 @@ module SimpleControlStructures =
 open SimpleControlStructures
 *)
 
+[<STAThread>]
 [<EntryPoint>]
 let main _ =
     // printfn "%A" argv
@@ -109,5 +110,6 @@ let main _ =
                                  DocumentText = fsharpOrg)
     let form = new Form(Text = "Hello from F#!")
     form.Controls.Add browser
-    form.Show()
+    Application.EnableVisualStyles()
+    Application.Run(form)
     0 // return an integer exit code

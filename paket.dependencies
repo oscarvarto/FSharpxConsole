@@ -6,3 +6,4 @@ nuget FSharpx.Extras
 nuget FSharp.Core
 
 http file:///usr/lib/mono/4.7-api/System.Windows.Forms.dll
+http file:///usr/lib/mono/4.7-api/System.Drawing.dll

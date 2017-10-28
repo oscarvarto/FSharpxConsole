@@ -2,3 +2,5 @@ FSharp.Core
 
 group Main
     FSharpx.Extras
+    File:System.Windows.Forms.dll .
+    File:System.Drawing.dll . 
