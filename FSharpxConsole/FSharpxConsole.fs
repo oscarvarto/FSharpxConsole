@@ -1,11 +1,6 @@
 module FSharpxConsole
 
 open System
-open System.Net
-open System.Windows.Forms
-
-(*
-open System
 open FSharpx
 open FSharpx.Option
 
@@ -79,37 +74,12 @@ module WithValidation =
      <* validateName p.Name
      <* validateAge p.Age
 
-module SimpleControlStructures =
-    let xs = seq { 1..10 }
+open WithValidation
 
-//open WithValidation
-open SimpleControlStructures
-*)
-
-[<STAThread>]
 [<EntryPoint>]
 let main _ =
-    // printfn "%A" argv
-    (*
     let p = { Name = ""; Age = 200uy }
     match validatePerson p with
     | Choice1Of2 person  -> printfn "Success: %A" person 
     | Choice2Of2 es -> printfn "Failure: %A" es
-    *)
-    
-    //printfn "%A" xs
-    (*
-    for x in xs do
-        printfn "%i" x
-    *)
-
-    let webClient = new WebClient()
-    let fsharpOrg = webClient.DownloadString(Uri "http://fsharp.org")
-    let browser = new WebBrowser(ScriptErrorsSuppressed = true,
-                                 Dock = DockStyle.Fill,
-                                 DocumentText = fsharpOrg)
-    let form = new Form(Text = "Hello from F#!")
-    form.Controls.Add browser
-    Application.EnableVisualStyles()
-    Application.Run(form)
     0 // return an integer exit code
