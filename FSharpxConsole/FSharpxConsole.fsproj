@@ -23,16 +23,7 @@
     <FscToolExe>fsharpc</FscToolExe>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Windows.Forms">
-      <HintPath>..\paket-files\localhost\System.Windows.Forms.dll</HintPath>
-      <Private>True</Private>
-      <Paket>True</Paket>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <HintPath>..\paket-files\localhost\System.Drawing.dll</HintPath>
-      <Private>True</Private>
-      <Paket>True</Paket>
-    </Reference>
+    <Compile Include="Person.fs"/>    
     <Compile Include="FSharpxConsole.fs" />
     <None Include="App.config" />
   </ItemGroup>
